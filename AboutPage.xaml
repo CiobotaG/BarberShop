@@ -9,7 +9,7 @@
  SemanticProperties.Description="Barber  Shop"
 HeightRequest="64" />
             <Label FontSize="22" FontAttributes="Bold" Text="Welcome to our barber shop!" VerticalOptions="End" />
-            <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
+            <Label FontSize="22" Text="By Cadis and Ciobota" VerticalOptions="End" />
         </HorizontalStackLayout>
         <Label Text="This app will help you to make an appointment for our services! " />
 

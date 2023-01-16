@@ -19,9 +19,13 @@ public partial class HaircutPage : ContentPage
     }
     async void OnDeleteButtonClicked(object sender, EventArgs e)
     {
-        var haircut = (Haircuts)BindingContext;
-        await App.Database.DeleteProductAsync(haircut);
-        listView.ItemsSource = await App.Database.GetProductsAsync();
+        Haircuts haircut;
+        if (listView.SelectedItem != null)
+        {
+            haircut = listView.SelectedItem as Haircuts;
+            await App.Database.DeleteProductAsync(haircut);
+            listView.ItemsSource = await App.Database.GetProductsAsync();
+        }
     }
     protected override async void OnAppearing()
     {
